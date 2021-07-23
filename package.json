@@ -1,7 +1,7 @@
 
 {
     "name": "@aerni/alpine-resize",
-    "description": "Trigger JavaScript when an element is resized",
+    "description": "Trigger JavaScript when an element is resized.",
     "version": "1.0.0",
     "author": {
         "name": "Michael Aerni",
