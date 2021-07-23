@@ -1,0 +1,35 @@
+
+{
+    "name": "@aerni/alpine-resize",
+    "description": "Trigger JavaScript when an element is resized",
+    "version": "1.0.0",
+    "author": {
+        "name": "Michael Aerni",
+        "email": "hello@michaelaerni.ch",
+        "url": "https://michaelaerni.ch"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/aerni/alpine-resize"
+    },
+    "license": "MIT",
+    "main": "dist/module.cjs.js",
+    "module": "dist/module.esm.js",
+    "devDependencies": {
+        "brotli-size": "^4.0.0",
+        "esbuild": "^0.8.39",
+        "eslint": "^7.22.0",
+        "eslint-config-standard": "^16.0.2",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-promise": "^4.3.1",
+        "eslint-plugin-standard": "^4.1.0",
+        "lint-staged": "^10.5.4"
+    },
+    "scripts": {
+        "build": "node ./scripts/build.js",
+        "watch": "node ./scripts/build.js --watch",
+        "lint": "eslint .",
+        "lint-fix": "eslint . --fix"
+    }
+}
