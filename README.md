@@ -10,8 +10,8 @@ You can use this plugin by either including it from a `<script>` tag or installi
 You can include the CDN build of this plugin as a `<script>` tag, just make sure to include it BEFORE Alpine's core JS file.
 
 ```html
-<!-- Alpine Plugins -->
-<script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+<!-- Alpine Resize -->
+<script defer src="https://cdn.jsdelivr.net/npm/@aerni/alpine-resize@1.x.x/dist/cdn.min.js"></script>
 
 <!-- Alpine Core -->
 <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
