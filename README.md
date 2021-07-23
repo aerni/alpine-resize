@@ -1,3 +1,7 @@
+![NPM Version](https://badgen.net/npm/v/@aerni/alpine-resize?style=flat-square)
+![Build Size](https://badgen.net/badgesize/gzip/aerni/alpine-resize/main/dist/cdn.min.js?style=flat-square)
+![License](https://img.shields.io/github/license/aerni/tailwindcss-rfs?style=flat-square)
+
 # Alpine Resize
 This is a convenience wrapper for Resize Observer that allows you to easily react when an element is resized.
 
