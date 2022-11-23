@@ -3,9 +3,7 @@
 ![License](https://img.shields.io/github/license/aerni/tailwindcss-rfs?style=flat-square)
 
 # Alpine Resize
-This is a convenience wrapper for Resize Observer that allows you to easily react when an element is resized.
-
-One possible use case is if you need to dynamically set the `sizes` attribute on the `<source>` tag of a `<picture>` element.
+This is a convenience wrapper around ResizeObserver that allows you to easily run code whenever an element is resized. One possible use case is to dynamically set the `sizes` attribute on the `<source>` tag of a `<picture>` element.
 
 ## Installation
 You can use this plugin by either including it from a `<script>` tag or installing it via NPM:
@@ -37,16 +35,35 @@ import resize from '@aerni/alpine-resize'
 Alpine.plugin(resize)
 ```
 
-
 ## Usage
-Add `x-resize` to any element within an Alpine component. When that component is resized, the provided expression will execute.
+Add `x-resize` to any element within an Alpine component. The provided expression will execute as soon as the element is resized.
 
-For example, in the following snippet, `resized` will remain `false` until the element is resized. At that point, the expression will execute and `resized` will become `true`:
+In this example, the element will show as soon as it is resized.
 
 ```html
 <div x-data="{ resized: false }" x-resize="resized = true">
     <div x-show="resized">
-        I was just resized!
+        This element shows as soon as it is resized
     </div>
+</div>
+```
+
+You can also provide a callback to access the `ResizeObserverEntry` to do fancy things like changing an elements font size based on its width.
+
+```html
+<div
+    x-data="{
+        width: 0,
+        minFontSize: 15,
+        maxFontSize: 50,
+    }"
+    x-resize="resizeObserverEntry => {
+        width = resizeObserverEntry.contentRect.width
+    }"
+    :style="{
+        'font-size': `${Math.min(maxFontSize, Math.max(minFontSize, width * 0.05))}px`,
+    }"
+>
+    The font-size of this element will change based on its width
 </div>
 ```
