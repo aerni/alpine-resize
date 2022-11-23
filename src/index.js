@@ -4,7 +4,7 @@ export default function (Alpine) {
             const evaluate = evaluateLater(expression)
 
             const observer = new ResizeObserver(entries => {
-                entries.forEach(entry => evaluate())
+                entries.forEach(entry => evaluate(() => {}, { params: [entry] }))
             })
 
             observer.observe(el)
