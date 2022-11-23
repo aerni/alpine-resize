@@ -48,7 +48,7 @@ In this example, the element will show as soon as it is resized.
 </div>
 ```
 
-You can also provide a callback to access the `ResizeObserverEntry` to do fancy things like changing an elements font size based on its width.
+You can also provide a callback to access the `ResizeObserverEntry` to do fancy things like changing an element's font size based on its width.
 
 ```html
 <div
