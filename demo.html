@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/@aerni/alpine-resize@1.x.x/dist/cdn.min.js"></script>
+        <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    </head>
+
+    <body class="p-16 flex flex-col items-center justify-center max-w-4xl mx-auto min-h-screen space-y-16">
+        <div
+            x-data="{
+                width: 0,
+                minFontSize: 15,
+                maxFontSize: 50,
+            }"
+            x-resize="resizeObserverEntry => {
+                width = resizeObserverEntry.contentRect.width
+            }"
+            :style="{
+                'font-size': `${Math.min(maxFontSize, Math.max(minFontSize, width * 0.05))}px`,
+            }"
+            :class="width < 500 ? 'bg-blue-100' : 'bg-red-100'"
+            class="p-8"
+        >
+            The font-size and background color of this element change based on its width
+        </div>
+    </body>
+
+</html>
