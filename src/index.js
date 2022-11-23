@@ -1,7 +1,6 @@
 export default function (Alpine) {
     Alpine.directive(
         'resize', (el, { expression }, { evaluateLater, cleanup }) => {
-            console.log(expression);
             const evaluate = evaluateLater(expression)
 
             const observer = new ResizeObserver(entries => {
