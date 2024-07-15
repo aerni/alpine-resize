@@ -1,3 +1,9 @@
+---
+
+## This package has been archived in favor of [Alpine's Resize plugin](https://alpinejs.dev/plugins/resize).
+
+---
+
 ![NPM Version](https://badgen.net/npm/v/@aerni/alpine-resize?style=flat-square)
 ![Build Size](https://badgen.net/badgesize/gzip/aerni/alpine-resize/main/dist/cdn.min.js?style=flat-square)
 ![License](https://img.shields.io/github/license/aerni/tailwindcss-rfs?style=flat-square)
