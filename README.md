@@ -1,7 +1,5 @@
 ---
-
-## This package has been archived in favor of [Alpine's Resize plugin](https://alpinejs.dev/plugins/resize).
-
+### This package has been archived in favor of [Alpine's Resize plugin](https://alpinejs.dev/plugins/resize).
 ---
 
 ![NPM Version](https://badgen.net/npm/v/@aerni/alpine-resize?style=flat-square)
